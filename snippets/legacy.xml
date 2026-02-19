@@ -10,25 +10,48 @@
     <project path="system/sepolicy" name="samsung-klte/android_system_sepolicy" remote="losul" />
     <project path="system/libhwbinder" name="samsung-klte/android_system_libhwbinder" groups="pdk" remote="losul" />
     <project path="device/qcom/sepolicy-legacy" name="samsung-klte/android_device_qcom_sepolicy" groups="qcom,pdk-qcom" revision="lineage-23.0-legacy" />
-    <project path="system/libhidl" name="samsung-klte/android_system_libhidl" groups="pdk" remote="losul" />
-    <project path="hardware/qcom-caf/common" name="LineageOS-UL/android_hardware_qcom-caf_common" groups="qcom" >
-    <project path="hardware/ril" name="LineageOS-UL/android_hardware_ril" remote="losul" />
+    <project path="system/libhidl" name="samsung-klte/android_system_libhidl" groups="pdk" remote="losul" />    <project path="hardware/ril" name="LineageOS-UL/android_hardware_ril" remote="lul" />
     <project path="hardware/qcom/audio" name="samsung-klte/android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk-qcom" remote="losul" />
-    <project path="hardware/qcom/bt" name="LineageOS-UL/android_hardware_qcom_bt" groups="qcom,pdk-qcom" remote="losul" />
+    <project path="hardware/qcom/bt" name="LineageOS-UL/android_hardware_qcom_bt" groups="qcom,pdk-qcom" remote="lul" />
     <project path="hardware/qcom/display" name="samsung-klte/android_hardware_qcom_display" groups="pdk-qcom,qcom,qcom_display" remote="losul" />
-    <project path="hardware/qcom/gps" name="LineageOS-UL/android_hardware_qcom_gps" groups="qcom,qcom_gps,pdk-qcom" remote="losul"/>
+    <project path="hardware/qcom/gps" name="LineageOS-UL/android_hardware_qcom_gps" groups="qcom,qcom_gps,pdk-qcom" remote="lul"/>
     <project path="hardware/qcom/media" name="samsung-klte/android_hardware_qcom_media" groups="qcom,pdk-qcom" remote="losul" />
-    <project path="hardware/qcom-caf/common" name="samsung-klte/android_hardware_qcom-caf_common" groups="qcom" >
+    <project path="hardware/qcom-caf/common" name="samsung-klte/android_hardware_qcom-caf_common" groups="qcom" remote="lul">
         <!-- add guard for AOSP hardware/qcom dir -->
         <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
         <!-- add guards for CAF repositories -->
         <linkfile src="os_pickup_sepolicy_vndr.mk" dest="device/qcom/sepolicy_vndr/SEPolicy.mk" />
         <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/msm8953/Android.bp" />
+        <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8916/Android.mk" />
+        <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8952/Android.mk" />
         <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8953/Android.mk" />
+        <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8960/Android.mk" />
         <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8974/Android.mk" />
+        <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8994/Android.mk" />
+        <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8996/Android.bp" />
+        <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8996/Android.mk" />
+        <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8998/Android.bp" />
+        <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8998/Android.mk" />
+        <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sdm660/Android.bp" />
+        <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sdm660/Android.mk" />
+        <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sdm845/Android.bp" />
+        <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sdm845/Android.mk" />
+        <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8150/Android.bp" />
+        <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8150/Android.mk" />
+        <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8250/Android.bp" />
+        <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8250/Android.mk" />
+        <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8350/Android.bp" />
+        <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8350/Android.mk" />
+        <linkfile src="os_pickup_audio-ar.mk" dest="hardware/qcom-caf/sm8450/audio/Android.mk" />
+        <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8450/Android.bp" />
+        <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8450/Android.mk" />
+        <linkfile src="os_pickup_audio-ar.mk" dest="hardware/qcom-caf/sm8550/audio/Android.mk" />
+        <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8550/Android.bp" />
+        <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8550/Android.mk" />
+        <!-- add guards for Pixel kernel modules -->
+        <linkfile src="os_pickup.bp" dest="kernel/google/gs201/private/google-modules/Android.bp" />
     </project>
     <project path="hardware/qcom-caf/msm8974/audio" name="LineageOS-UL/android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk-qcom" revision="lineage-21.0-caf-msm8974" />
     <project path="hardware/qcom-caf/msm8974/display" name="LineageOS-UL/android_hardware_qcom_display" groups="pdk-qcom,qcom,qcom_display" revision="lineage-21.0-caf-msm8974" />
     <project path="hardware/qcom-caf/msm8974/media" name="LineageOS-UL/android_hardware_qcom_media" groups="qcom,pdk-qcom" revision="lineage-21.0-caf-msm8974" />
-    </project>
 </manifest>
