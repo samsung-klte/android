@@ -16,7 +16,7 @@
     <project path="hardware/qcom/display" name="samsung-klte/android_hardware_qcom_display" groups="pdk-qcom,qcom,qcom_display" remote="losul" />
     <project path="hardware/qcom/gps" name="LineageOS-UL/android_hardware_qcom_gps" groups="qcom,qcom_gps,pdk-qcom" remote="lul"/>
     <project path="hardware/qcom/media" name="samsung-klte/android_hardware_qcom_media" groups="qcom,pdk-qcom" remote="losul" />
-    <project path="hardware/qcom-caf/common" name="samsung-klte/android_hardware_qcom-caf_common" groups="qcom" remote="lul">
+    <project path="hardware/qcom-caf/common" name="samsung-klte/android_hardware_qcom-caf_common" groups="qcom" remote="losul">
         <!-- add guard for AOSP hardware/qcom dir -->
         <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
         <!-- add guards for CAF repositories -->
